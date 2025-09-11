@@ -11,7 +11,7 @@ byte MAC[] = {0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA};
 const IPAddress IP(192, 168, 0, 100);
 
 // Set listen port
-const unsigned int PORT = 7000;  // port to listen on
+const unsigned int PORT = 8000;  // port to listen on
 
 // Set send ip-address and port
 const IPAddress DIST_IP(192, 168, 0, 50);
@@ -75,7 +75,9 @@ void setup()
 
   Ethernet.begin(MAC, IP);
   if (Ethernet.hardwareStatus() == EthernetNoHardware) {
-    Serial.println("Ethernet shield was not found.  Sorry, can't run without hardware. :(");
+    Serial.println(
+      "Ethernet shield was not found.  Sorry, can't run without "
+      "hardware. :(");
     while (true) {
       delay(1);  // do nothing, no point running without Ethernet hardware
     }

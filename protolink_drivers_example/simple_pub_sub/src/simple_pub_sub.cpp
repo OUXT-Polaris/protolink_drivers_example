@@ -21,7 +21,7 @@ namespace protolink_drivers_example
 
 // Network settings
 const std::string ip_address = "192.168.0.100";  // of microcontroller, etc.
-const uint16_t to_port = 7000;                   // same as above.
+const uint16_t to_port = 8000;                   // same as above.
 const uint16_t from_port = 8000;                 // of the computer executing this code.
 const uint16_t sub_port = 9000;                  // same as above
 
