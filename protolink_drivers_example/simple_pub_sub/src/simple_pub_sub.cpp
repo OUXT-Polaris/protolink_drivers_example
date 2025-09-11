@@ -16,7 +16,7 @@
 #include <protolink/client.hpp>
 #include <rclcpp/rclcpp.hpp>
 
-namespace protolink_drivers
+namespace protolink_drivers_example
 {
 
 // Network settings
@@ -67,7 +67,7 @@ private:
 
   int count = 0.0;
 };
-}  // namespace protolink_drivers
+}  // namespace protolink_drivers_example
 
 int main(int argc, char * argv[])
 {
@@ -75,7 +75,7 @@ int main(int argc, char * argv[])
   rclcpp::init(argc, argv);
 
   try {
-    auto node = std::make_shared<protolink_drivers::SimplePubSub>();
+    auto node = std::make_shared<protolink_drivers_example::SimplePubSub>();
     rclcpp::spin(node);
   } catch (std::exception & e) {
     std::cout << e.what() << std::endl;
