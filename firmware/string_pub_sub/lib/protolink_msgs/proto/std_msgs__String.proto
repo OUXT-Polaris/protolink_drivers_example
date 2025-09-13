@@ -1,0 +1,6 @@
+syntax = "proto3";
+package protolink__std_msgs__String;
+
+message std_msgs__String {
+optional string data = 1;
+}
